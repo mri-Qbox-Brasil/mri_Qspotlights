@@ -31,8 +31,8 @@ function utils.drawToCoords()
     initialCast = true
 
     lib.hideTextUI()
-    lib.showTextUI('[E] - Copy Initial Position', {
-        position = "left-center",
+    lib.showTextUI('[E] - Copiar posição inicial', {
+        position = "right-center",
     })
 
     CreateThread(function() 
@@ -61,8 +61,8 @@ function utils.drawFromInitial()
     secondCast = true
 
     lib.hideTextUI()
-    lib.showTextUI('[E] - Copy Second Position', {
-        position = "left-center",
+    lib.showTextUI('[E] - Copiar segunda opção', {
+        position = "right-center",
     })
 
     CreateThread(function() 
@@ -78,12 +78,12 @@ function utils.drawFromInitial()
                     lib.hideTextUI()
                     secondCast = false
                     
-                    local input = lib.inputDialog('New Spotlight', {
-                        {type = 'color', label = 'Spotlight Color', format = 'rgb', required = true},
-                        {type = 'number', label = 'Spotlight Distance', icon = 'hashtag', required = true},
-                        {type = 'number', label = 'Spotlight Brightness', icon = 'hashtag', required = true},
-                        {type = 'number', label = 'Spotlight Hardness', icon = 'hashtag', required = true},
-                        {type = 'number', label = 'Spotlight Radius', icon = 'hashtag', required = true},
+                    local input = lib.inputDialog('Nova Iluminação', {
+                        {type = 'color', label = 'Cor', format = 'rgb', required = true},
+                        {type = 'number', label = 'Distância', icon = 'hashtag', required = true},
+                        {type = 'number', label = 'Brilho', icon = 'hashtag', required = true},
+                        {type = 'number', label = 'Dureza', icon = 'hashtag', required = true},
+                        {type = 'number', label = 'Raio', icon = 'hashtag', required = true},
                     })
 
                     if not input then return end
