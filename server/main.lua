@@ -10,12 +10,12 @@ RegisterNetEvent("qw_spotlights:server:sync", function(data)
 end)
 
 lib.addCommand('spotlight', {
-    help = 'Gives an item to a player',
+    help = 'Ativa luzes dentro do jogo',
     params = {
         {
-            name = 'delete',
+            name = 'deletar',
             type = 'number',
-            help = 'Delete the closest spotlight',
+            help = '1 para poder deletar',
             optional = true
         },
     },
