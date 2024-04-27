@@ -26,7 +26,7 @@ RegisterNetEvent("qw_spotlights:client:remove", function()
         lib.hideTextUI()
     else
         lib.showTextUI('[E] - Delete Closest', {
-            position = "left-center",
+            position = "right-center",
         })
         while ShowSpotLights do
             local hit, _, coords, _, _ = lib.raycast.cam(1, 4, 10)
