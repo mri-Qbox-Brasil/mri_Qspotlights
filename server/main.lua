@@ -13,7 +13,7 @@ lib.addCommand('spotlight', {
     help = 'Ativa luzes dentro do jogo',
     params = {
         {
-            name = 'deletar',
+            name = 'delete',
             type = 'number',
             help = '1 para poder deletar',
             optional = true
