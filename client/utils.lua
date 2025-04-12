@@ -25,6 +25,11 @@ local secondCoords = nil
 
 local utils = {}
 
+local function RGB(str)
+    local r, g, b = str:match("rgb%((%d+),%s*(%d+),%s*(%d+)%)")
+    return { x = tonumber(r), y = tonumber(g), z = tonumber(b) }
+end
+
 --- draws a line from the player to the hit position on the raycast
 function utils.drawToCoords()
     if initialCast then return end
@@ -88,7 +93,7 @@ function utils.drawFromInitial()
 
                     if not input then return end
                     
-                    local rgb = math.torgba(input[1])
+                    local rgb = RGB(input[1])
                     local distance = input[2]
                     local brightness = input[3]
                     local hardness = input[4]
